@@ -1,0 +1,29 @@
+<footer class="site-footer">
+    <div class="wrapper">
+        <h2 class="footer-heading">Informações</h2>
+        <div class="footer-col-wrapper">
+            <div class="footer-col footer-col-1">
+                <ul class="contact-list">
+                    <li>Contato:</li>
+                    <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-2">
+                <ul class="social-media-list">
+                    {% if site.github_username %}
+                    <li>
+                        {% include icon-github.html username=site.github_username %}
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="footer-col footer-col-3 text-justfy">
+                <p>{{ site.description }}</p>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p class="pfooter">© PET Física - UFRPE | 2016 <br />Universidade Federal Rural de Pernambuco<br />Rua Dom Manoel de Medeiros, s/n, Dois Irmãos - CEP: 52171-900 - Recife/PE</p>
+        </div>
+</footer>
