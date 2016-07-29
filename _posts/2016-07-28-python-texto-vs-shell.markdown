@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Python texto vs shell"
+author: "Iury Xavier"
 date:   2016-07-28
 categories: python
 ---

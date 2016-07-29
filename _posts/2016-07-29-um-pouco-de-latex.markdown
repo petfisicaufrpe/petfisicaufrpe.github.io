@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Um pouco de latex"
+author: "Iury Xavier"
 date:   2016-07-29
 categories: latex
 ---
