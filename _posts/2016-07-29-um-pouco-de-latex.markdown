@@ -6,9 +6,7 @@ date:   2016-07-29
 categories: latex
 ---
 
-## Latex em MarkDown com MathJax ##
-
------------------------------------
+# Latex em MarkDown com MathJax #
 
 $$
 \begin{align*}
@@ -35,10 +33,6 @@ $$
         \end{array} 
     \right)
 \end{align*}
-$$    
-  
--------------------------------
+$$
 
-<br>
-
-# Com latex podemos nos divertir em montar equações bonitas #
+## Com latex podemos nos divertir em montar equações bonitas ##

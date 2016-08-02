@@ -1,38 +1,32 @@
 <!DOCTYPE html>
-<html>
-    
-    {% include head.html %}
-    
-    <body>
-        
-        {% include header.html %}
-        
-        <div class="page-content">
-            <div class="wrapper">
-            
-                {{ content }}
-            
-            </div>
-        </div>
-        
-        {% include footer.html %}
-        
-        <!-- MathJax -->
-        <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({
-                extensions: ["tex2jax.js"],
-                jax: ["input/TeX", "output/HTML-CSS"],
-                tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-                processEscapes: true
-                },
-                "HTML-CSS": { availableFonts: ["TeX"] }
-            });
-        </script>   
-        <script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
-        <!-- Fim - MathJax -->
-        
-    </body>
+<html lang="pt-br">
+	{% include head.html %}
+	<body>
+		{% include header.html %}
+		<div class="container lead">
+			<div class="row">
+				<div class="col-lg-12">
+					{{ content }}
+				</div>
+			</div>
+		</div>
+		<div class="container lead">
+			<div class="row">
+				<div class="col-lg-12">
+					<hr class="featurette-divider">
+					{% include info.html %}
+				</div>
+			</div>
+		</div>
 
+		<div class="container lead">
+			<div class="row">
+				<div class="col-lg-12">
+					<hr class="featurette-divider">
+					{% include footer.html %}
+				</div>
+			</div>
+		</div>
+		{% include scripts.html %}
+	</body>
 </html>

@@ -6,26 +6,21 @@ date:   2016-07-28
 categories: python
 ---
 
-**Markdown**
+# Markdown
 
 ``` python
 1 print "hello word!"
 ```
 
-{% highlight python %}
-
+``` python
 >>> def print_hi(name):
 >>>     return "Hi," + name
 >>> print_hi('Tom')
  Hi, Tom
->>>
+```
 
-{% endhighlight %}
-
-{% highlight python linenos %}
-
-def print_hi(name):
-    return "Hi," + name
-print_hi('Tom')
-
-{% endhighlight %}
+``` python
+1 def print_hi(name):
+2    return "Hi," + name
+3 print_hi('Tom')
+```
