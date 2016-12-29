@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
         <meta charset="utf-8" />
-        <title>PET-Física UFRPE</title>
+        <title>"Python texto vs shell"</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -17,65 +17,18 @@
                     <li><a href="/pages/sobre-nos.html">Sobre nós</a></li>
                     <li><a href="/pages/participantes.html">"Participantes"</a></li>
                     <li><a href="/pages/propostas.html">"Propostas"</a></li>
-                    <li><a href="/category/blog.html">blog</a></li>
+                    <li class="active"><a href="/category/blog.html">blog</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/python-texto-vs-shell.html" rel="bookmark"
+           title="Permalink to "Python texto vs shell"">"Python texto vs shell"</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/um-pouco-de-latex.html">"Um pouco de latex"</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2016-07-29T00:00:00-03:00">
-                Published: sex 29 julho 2016
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/iury-xavier.html">"Iury Xavier"</a>
-        </address>
-<p>In <a href="/category/blog.html">blog</a>.</p>
-
-</footer><!-- /.post-info --><h1>Latex em MarkDown com MathJax</h1>
-<p>$$
-\begin{align<em>}
-   \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) = 
-\end{align</em>}
-$$</p>
-<p>$$
-\begin{align*}
-    \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = (x_1, \ldots, x_n)
-    \left(
-        \begin{array}{ccc}
-            \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \
-            \vdots &amp; \ddots &amp; \vdots \
-            \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
-        \end{array} 
-    \right)</p>
-<div class="highlight"><pre><span></span>\left( 
-    \begin{array}{c}
-        y_1 \\
-        \vdots \\
-        y_n
-    \end{array} 
-\right)
-</pre></div>
-
-
-<p>\end{align*}
-$$</p>
-<h2>Com latex podemos nos divertir em montar equações bonitas</h2>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/python-texto-vs-shell.html" rel="bookmark"
-                           title="Permalink to "Python texto vs shell"">"Python texto vs shell"</a></h1>
-                </header>
-
-                <div class="entry-content">
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2016-07-28T00:00:00-03:00">
                 Published: qui 28 julho 2016
@@ -86,7 +39,7 @@ $$</p>
         </address>
 <p>In <a href="/category/blog.html">blog</a>.</p>
 
-</footer><!-- /.post-info -->                <h1>Markdown e Trinket.io</h1>
+</footer><!-- /.post-info -->      <h1>Markdown e Trinket.io</h1>
 <p>{% include trinket-open type='python' %}
 import turtle</p>
 <p>tina = turtle.Turtle()</p>
@@ -99,12 +52,37 @@ tina.backward(100)
 tina.write("Hello world!")</p>
 <p>{% include trinket-open type='glowscript' height='600' %}</p>
 <h1>GlowScript 1.1 VPython</h1>
-<p>scene.caption …</p>
-                <a class="readmore" href="/python-texto-vs-shell.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
+<p>scene.caption.text("""Right button drag or Ctrl-drag to rotate "camera" to view scene.
+Middle button or Alt-drag to drag up or down to zoom in or out.
+  On a two-button mouse, middle is left + right.
+Touch screen: pinch/extend to zoom, swipe or two-finger rotate.""")</p>
+<p>side = 4.0
+thk = 0.3
+s2 = 2<em>side - thk
+s3 = 2</em>side + thk</p>
+<p>wallR = box (pos=vector( side, 0, 0), size=vector(thk, s2, s3),  color = color.red)
+wallL = box (pos=vector(-side, 0, 0), size=vector(thk, s2, s3),  color = color.red)
+wallB = box (pos=vector(0, -side, 0), size=vector(s3, thk, s3),  color = color.blue)
+wallT = box (pos=vector(0,  side, 0), size=vector(s3, thk, s3),  color = color.blue)
+wallBK = box(pos=vector(0, 0, -side), size=vector(s2, s2, thk), color = vector(0.7,0.7,0.7))</p>
+<p>ball = sphere (color = color.green, radius = 0.4, make_trail=True, retain=200)
+ball.mass = 1.0
+ball.p = vector (-0.15, -0.23, +0.27)</p>
+<p>side = side - thk*0.5 - ball.radius</p>
+<p _="%" include trinket-close>dt = 0.3
+while True:
+  rate(200)
+  ball.pos = ball.pos + (ball.p/ball.mass)*dt
+  if not (side &gt; ball.pos.x &gt; -side):
+    ball.p.x = -ball.p.x
+  if not (side &gt; ball.pos.y &gt; -side):
+    ball.p.y = -ball.p.y
+  if not (side &gt; ball.pos.z &gt; -side):
+    ball.p.z = -ball.p.z</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>links</h2>
