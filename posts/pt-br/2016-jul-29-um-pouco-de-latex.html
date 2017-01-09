@@ -18,6 +18,9 @@
 <!-- Style [iaxs] Css -->
 	<link rel="stylesheet" href="/theme/css/iaxs/iaxs.css">
 <!-- EndStyle [iaxs] Css -->
+<!-- Highlight [emacs] Css -->
+	<link rel="stylesheet" href="/theme/css/highlight/style.css">
+<!-- EndHighlight [emacs] Css -->
 <!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/theme/favicon/favicon.ico">
 	<link rel="icon" href="/theme/favicon/favicon.ico" type="image/x-icon">
@@ -38,12 +41,12 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right iaxs-navbar-nav">
-					<li><a href=""><i class="fa fa-home" aria-hidden="true"></i> Início</a></li>
-					<li><a href="pages/pt-br/blog.html"><i class="fa fa-file-o" aria-hidden="true"></i> Blog</a></li>
-					<li><a href="pages/pt-br/contato.html"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contato</a></li>
-					<li><a href="pages/pt-br/participantes.html"><i class="fa fa-users" aria-hidden="true"></i> Participantes</a></li>
-					<li><a href="pages/pt-br/propostas.html"><i class="fa fa-briefcase" aria-hidden="true"></i> Propostas</a></li>
-					<li><a href="pages/pt-br/sobre-nos.html"><i class="fa fa-object-group" aria-hidden="true"></i> Sobre nós</a></li>
+					<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Início</a></li>
+					<li><a href="/pages/pt-br/blog.html"><i class="fa fa-file-o" aria-hidden="true"></i> Blog</a></li>
+					<li><a href="/pages/pt-br/contato.html"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contato</a></li>
+					<li><a href="/pages/pt-br/participantes.html"><i class="fa fa-users" aria-hidden="true"></i> Participantes</a></li>
+					<li><a href="/pages/pt-br/propostas.html"><i class="fa fa-briefcase" aria-hidden="true"></i> Propostas</a></li>
+					<li><a href="/pages/pt-br/sobre-nos.html"><i class="fa fa-object-group" aria-hidden="true"></i> Sobre nós</a></li>
 				</ul>
 			</div>
 		</div>
@@ -51,21 +54,24 @@
 <!-- EndNavbar -->
 <!-- Header <-->
 	<div class="container-fluid iaxs-header text-center">
-	<h1>
+		<header>
+	<h1 class="iaxs-color-base">
 		Um pouco de latex
 	</h1>
-	<h3>
+	<h3 class="iaxs-color-base">
 		saiba mais sobre latex
 	</h3>
-	<p>
+	<p class="iaxs-color-base">
 		<p>Muito mais sobre latex para seus trabalhos científicos</p>
 	</p>	
+		</header>
 	</div>
 <!-- EndHeader -->
 <!-- Content -->
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				<br />
 	<h1>Latex em MarkDown com MathJax</h1>
 <p>$$
 \begin{align<em>}
@@ -95,12 +101,40 @@ $$</p>
 <p>\end{align*}
 $$</p>
 <h2>Com latex podemos nos divertir em montar equações bonitas</h2>
+				<br />
 			</div>
 		</div>
 	</div>
 <!-- EndContent -->
 <!-- Google Maps -->
 <!-- EndGoogle Maps -->
+<!-- Disqus -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<div id="disqus_thread"></div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+var disqus_config = function () {
+this.page.url = posts/pt-br/2016-jul-29-um-pouco-de-latex.html;
+this.page.identifier = um-pouco-de-latex;
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//https-petfisicaufrpe-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//https-petfisicaufrpe-github-io.disqus.com/count.js" async></script>
+<!-- EndDisqus -->
 <!-- Footer -->
 	<div class="container-fluid text-center iaxs-footer">
 	  <p>&copy; 2017 PET Física-UFRPE | feito por <a class="iaxs-link"href="https://iuryxavier.github.io">Iury Xavier</a></p>
